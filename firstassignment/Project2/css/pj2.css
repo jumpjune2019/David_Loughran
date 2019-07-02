@@ -1,0 +1,71 @@
+#myState{
+	float: right;
+}
+
+#undoB{
+	float: left;
+}
+
+#scoreB{
+	float: right;
+}
+
+#scoreID{
+	
+}
+
+div.dropEndGroup{
+	display: block;
+	background-color: gray;
+	float: right;
+}
+
+div.dragStartGroup{
+	display: block;
+	float: left;
+}
+
+div.dragItemsGroup{
+
+}
+
+div.dropEnd{
+	width: 350px;
+	height: 70px;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+}
+
+div.dragStart{
+	width: 350px;
+	height: 70px;
+	padding: 10px;
+	border: 1px solid blue;
+	background-color: black;
+}
+
+div.dragItems{
+	width: 200px;
+	height: 50px;
+	border: 1px solid red;
+	background-color: pink;
+
+}
+
+div.definitionFieldGroup{
+	display: block;
+	background-color: yellow;
+	float:right;
+}
+
+div.definitionField{
+	width: 350px;
+	height: 70px;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+}
+
+div.container{
+	
+
+}

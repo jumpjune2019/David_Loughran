@@ -1,0 +1,50 @@
+<!doctyp html>
+<html>
+	<head>
+		<title>Quiz Game</title>
+		<script type="text/javascript" src="js/quiz.js"></script>
+		 <link rel="stylesheet" type="text/css" href="css/pj2.css"></link>
+	</head>
+	<body>
+	<script>
+
+	</script>
+		<h1 id="test">Quiz Game</h1>
+			<h2><input type="text" id="roundCounter" value="Round: /4"></input></h2>
+				<input type='button' id="myState" nextstate="End Game" value="Play" onclick="change()"></input>
+				<div id="timer">00:00:00</div>
+				<input type="text" id="scoreID" value="Score: "></input>
+				<button id="undoB" onclick="undo()" disabled="true">Undo</button>
+			<div class="example">			
+			</div>
+			
+				<div class="container">
+						<!-- Drag Items & Source Locations-->
+						<div class="dragStartGroup">
+							<div class="dragItemsGroup">
+								<div class="dragStart"><div class="dragItems" id="dragItem1" draggable="false" ondragstart="drag(event)"></div></div>
+								<div class="dragStart"><div class="dragItems" id="dragItem2" draggable="false" ondragstart="drag(event)"></div></div>
+								<div class="dragStart"><div class="dragItems" id="dragItem3" draggable="false" ondragstart="drag(event)"></div></div>
+								<div class="dragStart"><div class="dragItems" id="dragItem4" draggable="false" ondragstart="drag(event)"></div></div>
+								<div class="dragStart"><div class="dragItems" id="dragItem5" draggable="false" ondragstart="drag(event)"></div></div>
+							</div>
+						</div>
+						<!-- definition Field -->
+						<div class="definitionFieldGroup">
+								<div class="definitionField" id="field1"></div>
+								<div class="definitionField" id="field2"></div>
+								<div class="definitionField" id="field3"></div>
+								<div class="definitionField" id="field4"></div>
+								<div class="definitionField" id="field5"></div>
+						</div>
+						<!-- Drop locations -->
+						<div class="dropEndGroup">
+								<div class="dropEnd" id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)">Place your answer here.</div>
+								<div class="dropEnd" id="drop2" ondrop="drop(event)" ondragover="allowDrop(event)">Place your answer here.</div>
+								<div class="dropEnd" id="drop3" ondrop="drop(event)" ondragover="allowDrop(event)">Place your answer here.</div>
+								<div class="dropEnd" id="drop4" ondrop="drop(event)" ondragover="allowDrop(event)">Place your answer here.</div>
+								<div class="dropEnd" id="drop5" ondrop="drop(event)" ondragover="allowDrop(event)">Place your answer here.</div>
+						</div>					
+				</div>			
+	</body>
+</html>

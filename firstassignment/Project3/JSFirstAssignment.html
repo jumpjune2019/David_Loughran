@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My First HTML/JS App</title>
+		<script></script>
+	</head>
+	<body>
+		<h1>My First HTML/JS App</h1>
+		<h2>User: <span id="getName"></span></h2>
+			<form>
+			<!-- Information -->
+				Date of Birth (dd/mm/yyyy):
+				<input type="date" date="DoB"><br>
+				City: 
+				<input type="text" city="City"><br>
+				State: 
+				<input type="text" state="State" size='2'><br>
+				Zip: 
+				<input type="number" zip="Zip" size='5'><br>
+				Hobby: 
+				<input type="text" interest="Hobby"><br><br>
+				
+				<!-- buttons -->
+				<input type="reset" name="resetButton">
+				<button type="button" onclick="alert('submit clicked')">Submit</button>
+				<br><br>
+				<button type="button" onclick="document.location.reload(true)">Reset Page</button>
+			</form>
+			
+		<!-- retrieve user name -->
+		<script>
+		debugger;
+			var userName = "Generic User";
+			userName = prompt("Please enter your user name.");
+			//userName.trim();
+			if (userName != null){
+				document.getElementById("getName").innerHTML = userName;
+			}
+			else if(!userName){
+				document.getElementById("getName").innerHTML = "Generic User";
+			}
+			else if(userName === ""){
+				document.getElementById("getName").innerHTML = "Generic User";
+			}
+			else if(userName == ""){
+				document.getElementById("getName").innerHTML = "Generic User";
+			}
+			else {
+				document.getElementById("getName").innerHTML = "Generic User";
+			}
+			debugger;
+		</script>
+	</body>
+</html>
