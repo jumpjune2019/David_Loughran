@@ -1,0 +1,8 @@
+Dice Combinations Label Matrix
+	Die 1			Die 2		Die 3			Die 4		Die 5			Die 6
+Die 1	Snake Eyes		Australian Yo	Little Joe From Kokomo	No field five	Easy Six		Six one you're done
+Die 2	Ace caught a deuce	Ballerina	The Fever		Jimmie Hicks	Benny Blue		Easy Eight
+Die 3	Easy Four		OJ		Brooklyn Fores		Big Red		Eighter from Decatur	Nina from Pasadena
+Die 4	Little Phoebe		Easy Six	Skinny McKinney		Square Pair	Railroad nine		Big one on the end
+Die 5	Sixic from Dixie	Skinny Dugan	Easy Eight		Jesse James	Puppy paws		Yo
+Die 6	The Devil		Easy Eight	Lou Brown		Tennessee	Six five no jive	Midnight

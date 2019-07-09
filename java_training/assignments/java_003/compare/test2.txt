@@ -1,0 +1,2 @@
+The content within this file should be identical to another file within the same directory.
+Why are you still reading this?
