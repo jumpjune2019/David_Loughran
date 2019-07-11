@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-
 public class ThreadControl {
 	static String input = "start";
 	static String input2 = "lol";
@@ -20,7 +19,7 @@ public class ThreadControl {
 		JFrame frame = new JFrame("Key Listener");
 		KeyListener listener = new KeyListener() {
 			@Override
-			public void keyPressed(KeyEvent event) {
+			public void keyPressed(KeyEvent event) {				//retrieve input 
 				layerControl = !layerControl;
 				if (layerControl) {
 					setInput(event.getKeyChar() +"");
@@ -44,8 +43,7 @@ public class ThreadControl {
 			}
 		};
 
-
-		TextArea ta = new TextArea();
+		TextArea ta = new TextArea();		//define data entry space
 		ta.addKeyListener(listener);
 		frame.add(ta);
 		frame.setSize(200,200);
@@ -60,12 +58,10 @@ public class ThreadControl {
 	}
 	
 	public static void grabThread() {
-		//System.out.println("input1: " + input);
-		//System.out.println("input2: " + input2);
 		int tracker=0;
 		boolean end = false;
 		try {
-					if (input.equals("1")) {
+					if (input.equals("1")) {											//check input and pass variables to next stage
 						tracker = ob1.inputUsage(ob1, end, tracker, input, input2);
 					} else if (input.equals("2")) {
 						tracker = ob2.inputUsage(ob2, end, tracker, input, input2);
@@ -84,7 +80,7 @@ public class ThreadControl {
 						boolean state3 = ob3.checkState(ob3);
 						boolean state4 = ob4.checkState(ob4);
 						boolean state5 = ob5.checkState(ob5);
-						if (!state1) {System.out.println("Thread 1 running: " + !ob1.suspend + " - Press 1 to control");}
+						if (!state1) {System.out.println("Thread 1 running: " + !ob1.suspend + " - Press 1 to control");}	//print run state
 						if (!state2) {System.out.println("Thread 2 running: " + !ob2.suspend + " - Press 2 to control");}
 						if (!state3) {System.out.println("Thread 3 running: " + !ob3.suspend + " - Press 3 to control");}
 						if (!state4) {System.out.println("Thread 4 running: " + !ob4.suspend + " - Press 4 to control");}

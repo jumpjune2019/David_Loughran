@@ -18,7 +18,7 @@ class MyThread01 implements Runnable {
 		String line1 = " Priority was "; String line2 = " but is now ";
 		String stopLine = "Permanently stopping the execution of Thread ";
 		
-				if (input2.equals(input) && suspend == false) {
+				if (input2.equals(input) && suspend == false) {			//check input after selection and peform selected process
 					ob.mySuspend(ob);
 				} else if (input2.equals(input) && suspend == true) {
 					ob.myResume(ob);
