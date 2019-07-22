@@ -1,0 +1,116 @@
+package gridlayoutchallenge;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+public class challengeM implements ActionListener{
+	private JFrame mainFrame;
+	private JLabel headerLabel;
+	private JLabel statusLabel;
+	private JPanel controlPanel;
+
+	public challengeM(){
+		prepareGUI();
+	}
+	   
+	private void prepareGUI(){
+		mainFrame = new JFrame("Grid Layout Challenge");
+		mainFrame.setSize(900,900);
+		mainFrame.setLayout(new GridLayout(1, 1));
+		headerLabel = new JLabel("",JLabel.CENTER );
+		statusLabel = new JLabel("",JLabel.CENTER);        
+		//statusLabel.setSize(350,100);
+	      
+		// old school way to close a window
+		mainFrame.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent windowEvent){
+				// this is the way to force a java application to gracefully exit
+				// when not going to end via the main method entry point
+				System.exit(0);
+			}        
+		});    
+		controlPanel = new JPanel();
+		controlPanel.setLayout(new FlowLayout());
+
+		mainFrame.add(headerLabel);
+		mainFrame.add(controlPanel);
+		mainFrame.add(statusLabel);
+		mainFrame.setVisible(true);  
+	}
+	   
+	private void showGridLayoutDemo() throws NullPointerException {
+		headerLabel.setText("Basic Matrix Demo");      
+		statusLabel.setText("No seat selected");
+		JPanel panel = new JPanel();
+		//panel.setBackground(Color.CYAN);
+		//panel.setSize(300,300);
+		int row = dieRoll();
+		int col = dieRoll();
+		GridLayout layout = new GridLayout(row, col);
+		layout.setHgap(10);
+		layout.setVgap(10);
+		panel.setLayout(layout);
+		JButton[][] buttons = new JButton[row][col];
+		for (int x=0; x<row; x++) {
+			for (int y=0; y<col; y++) {
+				String rowLabel = getLetter(x + 1) + "-";
+				buttons[x][y] = new JButton(rowLabel.concat(Integer.toString(y + 1)));
+				buttons[x][y].addActionListener(this);
+				panel.add(buttons[x][y]);
+			}
+		}
+     
+		controlPanel.add(panel);
+		mainFrame.setVisible(true);  
+	}
+	 
+	public void actionPerformed(ActionEvent ae) {
+		statusLabel.setText(ae.getActionCommand());
+	}
+   
+	public static void main(String[] args){
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				challengeM gridLayoutDemo = new challengeM();  
+				gridLayoutDemo.showGridLayoutDemo();
+			}
+		}); 
+
+	}
+	
+	//take an int that represents a row and return the corresponding letter
+	public static char getLetter(int Row) {
+		char cRow = 'Z';
+		switch (Row) {
+		case 1:
+			cRow = 'A';
+			break;
+		case 2:
+			cRow = 'B';
+			break;
+		case 3:
+			cRow = 'C';
+			break;
+		case 4:
+			cRow = 'D';
+			break;
+		case 5:
+			cRow = 'E';
+			break;
+		}
+		return cRow;
+	}
+	//generates and returns random number of 2 or 5
+	public static int dieRoll() {
+		double rand = Math.floor((Math.random() * 4) + 2);
+		return (int)rand;
+	}
+}
+
+
