@@ -3,6 +3,7 @@ package gridlayoutchallenge;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -66,6 +67,7 @@ public class challengeM implements ActionListener{
 					containers.add(tag);
 					buttons[x][y] = new JButton(rowLabel);
 					buttons[x][y].addActionListener(this);
+					buttons[x][y].setFont(new Font(Font.SERIF, Font.PLAIN, 8));
 					containers.add(buttons[x][y]); 
 					boxGrid.add(containers);
 			}
